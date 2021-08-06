@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guess Me</title>
+    <link
+      rel="icon"
+      href="https://mg.co.uk/m/b7bdc4/600.jpg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <link rel="stylesheet" href="./CSS/guessme.css" />
+  <script src="./JS/guessme.js"></script>
+  <body>
+    <h1 id="guessMe">Guess Me</h1>
+    <div id="description">
+      Guess me is a small game where i will guess one Number and you match with
+      that. I have given you 20 points. Each time when you guess wrong number,
+      you will lose one point.Each time when you guess wrong number, i will help you by giving hints to reach me fast in the right side above score.
+    </div>
+    <hr />
+    <div style="padding: 10px">
+      <button
+        id="play_again"
+        onclick="restartGame();"
+        class="md-btn-primary btn btn-primary"
+      >
+        Play Again.!
+      </button>
+      <div id="num_range">(Between 1 and 20)</div>
+    </div>
+    <br />
+    <div id="myNumberDiv">
+      <span id="leftSpan"><hr /></span>
+      <input
+        class="form-control"
+        type="text"
+        id="myNumber"
+        value="?"
+        disabled
+      />
+      <span id="rightSpan"><hr /></span>
+    </div>
+    <div id="userNumberDiv">
+      <input class="form-control" type="number" id="userNumber" />
+      <button
+        class="md-btn btn btn-warning"
+        id="checkButton"
+        onclick="checkUserValue();"
+      >
+        Check!
+      </button>
+    </div>
+    <div id="rightSection">
+      <div id="result">Enter a Number</div>
+      <div id="scoreDiv">
+        Score:
+        <span id="score">20</span>
+      </div>
+      <div id="highScoreDiv">
+        <span>High Score:</span>
+        <span id="highScore">0</span>
+      </div>
+    </div>
+  </body>
+</html>
