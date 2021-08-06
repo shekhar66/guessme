@@ -20,13 +20,10 @@ function checkUserValue() {
     document.getElementById("userNumber").focus();
     return;
   }
-  console.warn(userNumber);
-  console.warn(secretNumber);
   if (secretNumber === userNumber) {
     document.getElementById("myNumber").value = secretNumber;
     document.getElementById("myNumber").style.background = "yellow";
     document.body.style.backgroundColor = "#28a745";
-    console.error(highScore);
     if(score>highScore){
       highScore = score;
       document.getElementById("highScore").textContent = score; 
